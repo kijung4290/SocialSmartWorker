@@ -1,0 +1,385 @@
+/* Pretendard 폰트는 CDN으로 불러옵니다 */
+
+/* 기본 스타일 및 리셋 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background: #f7f9fb;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+#site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.96);
+    box-shadow: 0 2px 24px 0 rgba(49,130,246,0.07);
+    z-index: 100;
+    padding: 18px 0 14px 0;
+    border-bottom: 1px solid #f0f3f7;
+    backdrop-filter: blur(3px);
+    transition: background 0.3s;
+}
+#site-header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+@media (max-width: 900px) {
+  #site-header .container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    padding: 0 10px;
+  }
+}
+.site-logo a {
+    text-decoration: none;
+    color: #3182f6;
+    font-size: 2.2em;
+    font-weight: 900;
+    letter-spacing: -1px;
+    display: block;
+    text-align: center;
+}
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+@media (max-width: 900px) {
+  #main-nav ul {
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    width: 180px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(49,130,246,0.07);
+    padding: 18px 0;
+    display: none;
+    z-index: 200;
+  }
+  #main-nav.open ul {
+    display: flex;
+  }
+}
+#main-nav li {
+    margin-left: 0;
+}
+#main-nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+    font-size: 1.13em;
+    padding: 6px 10px;
+    border-radius: 12px;
+    transition: background 0.2s, color 0.2s;
+}
+#main-nav a:hover {
+    background: #f0f6ff;
+    color: #3182f6;
+}
+#main-nav a.active {
+    color: #3182f6;
+    background: #eaf3ff;
+    font-weight: 800;
+}
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #3182f6;
+    transition: color 0.2s;
+}
+@media (max-width: 900px) {
+  #menu-toggle {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    z-index: 201;
+  }
+}
+.section {
+    padding: 100px 0 90px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-margin-top: 90px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 4px 32px 0 rgba(49,130,246,0.04);
+    margin-bottom: 32px;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .section {
+    padding: 44px 0 38px 0;
+    min-height: auto;
+    border-radius: 18px;
+    margin-bottom: 18px;
+  }
+}
+.section h2 {
+    margin-bottom: 32px;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #222;
+    letter-spacing: -1px;
+}
+.section p {
+    margin-bottom: 26px;
+    font-size: 1.18em;
+    color: #444;
+    max-width: 700px;
+}
+.alternate-bg {
+    background-color: #f7faff;
+}
+.process-steps {
+    display: flex;
+    gap: 32px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.process-steps .step {
+    flex: 1 1 210px;
+    max-width: 240px;
+    min-width: 180px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .process-steps {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 100%;
+  }
+  .process-steps .step {
+    max-width: 95vw;
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 900px) {
+  .process-steps {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 100%;
+  }
+}
+.service-list {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 900px;
+    margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .service-list {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 100%;
+  }
+}
+.service-item, .about-text, .step {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(49,130,246,0.04);
+    padding: 32px 24px 28px 24px;
+    margin-bottom: 18px;
+    flex: 1 1 200px;
+    max-width: 350px;
+}
+.step-number {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 50%;
+    background: #3182f6;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+.cta-btn {
+    display: inline-block;
+    background: #3182f6;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.18em;
+    padding: 16px 40px;
+    border-radius: 32px;
+    margin-top: 30px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.cta-btn:hover {
+    background: #225ea8;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 14px;
+    border: 1px solid #d0d7e1;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form button {
+    align-self: flex-end;
+    width: auto;
+    background: #3182f6;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 36px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.contact-form button:hover {
+    background: #225ea8;
+}
+#site-footer {
+    background: #f7f9fb;
+    text-align: center;
+    padding: 32px 0 24px 0;
+    color: #888;
+    font-size: 1em;
+    margin-top: 60px;
+}
+/* 스크롤 애니메이션 */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+}
+.scale-text {
+    display: inline-block;
+    transform: scale(0.94);
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(0.4,0.2,0.3,1), opacity 0.7s cubic-bezier(0.4,0.2,0.3,1), color 0.4s, text-shadow 0.4s;
+}
+.scale-text.is-visible {
+    transform: scale(1);
+    opacity: 1;
+}
+.scale-text.scale-active {
+    color: #225ea8;
+    transform: scale(1.08);
+    text-shadow: 0 4px 24px rgba(49,130,246,0.10);
+    opacity: 1;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+@media (max-width: 768px) {
+    body {
+        background: #fff;
+    }
+    #site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+    #main-nav ul {
+        flex-direction: column;
+        gap: 12px;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 180px;
+        padding: 18px 0;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px 0 rgba(49,130,246,0.07);
+        display: none;
+    }
+    #main-nav.open ul {
+        display: flex;
+    }
+    #menu-toggle {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 22px;
+    }
+    .section {
+        padding: 44px 0 38px 0;
+        min-height: auto;
+        text-align: center;
+    }
+    .service-list, .process-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .service-item, .step {
+        width: 80%;
+        max-width: 350px;
+    }
+}

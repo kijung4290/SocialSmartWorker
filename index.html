@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트워크 혁신 랜딩페이지</title>
+    <!-- Pretendard & CSS 스타일 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header id="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="#hero">SmartWork</a>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#hero" class="active">홈</a></li>
+                    <li><a href="#about">소개</a></li>
+                    <li><a href="#service">서비스</a></li>
+                    <li><a href="#process">프로세스</a></li>
+                    <li><a href="#contact">문의</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+        </div>
+    </header>
+    <main>
+        <!-- 히어로 섹션 -->
+        <section id="hero" class="section">
+            <div class="container">
+                <h1 class="scale-text">스마트워크 혁신으로<br>비즈니스의 미래를 바꿔보세요</h1>
+                <p class="animate-on-scroll">스마트워크 컨설팅, 시스템 구축, 교육까지 한 번에!</p>
+                <a href="#contact" class="cta-btn animate-on-scroll">무료 상담 신청</a>
+            </div>
+        </section>
+        <!-- 소개 섹션 -->
+        <section id="about" class="section alternate-bg">
+            <div class="container">
+                <h2 class="scale-text">스마트워크란?</h2>
+                <div class="about-text animate-on-scroll">
+                    <ul>
+                        <li>업무의 디지털 전환과 최적화</li>
+                        <li>협업 및 커뮤니케이션 혁신</li>
+                        <li>유연한 근무 환경 제공</li>
+                        <li>비용 절감 및 생산성 향상</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 서비스 섹션 -->
+        <section id="service" class="section">
+            <div class="container">
+                <h2 class="scale-text">주요 서비스</h2>
+                <div class="service-list">
+                    <div class="service-item animate-on-scroll">
+                        <h3>스마트워크 컨설팅</h3>
+                        <p>현황 분석 및 맞춤형 전략 수립</p>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <h3>시스템 구축</h3>
+                        <p>스마트워크 도입에 필요한 IT 인프라 구축</p>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <h3>교육 및 지원</h3>
+                        <p>임직원 대상 스마트워크 활용 교육</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 프로세스 섹션 -->
+        <section id="process" class="section alternate-bg">
+            <div class="container">
+                <h2 class="scale-text">도입 프로세스</h2>
+                <div class="process-steps">
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <h4>상담 및 진단</h4>
+                        <p>기업 현황 및 니즈 파악</p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">2</div>
+                        <h4>전략 수립</h4>
+                        <p>맞춤형 스마트워크 전략 제안</p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">3</div>
+                        <h4>구축 및 교육</h4>
+                        <p>시스템 구축 및 임직원 교육</p>
+                    </div>
+                    <div class="step animate-on-scroll">
+                        <div class="step-number">4</div>
+                        <h4>운영 지원</h4>
+                        <p>스마트워크 시스템을 운영 및 유지보수</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 문의하기 섹션 -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>스마트워크 컨설팅 문의</h2>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="이름" required>
+                    <input type="email" name="email" placeholder="이메일" required>
+                    <textarea name="message" placeholder="스마트워크 도입/컨설팅/교육 등 궁금한 점을 남겨주세요." rows="5" required></textarea>
+                    <button type="submit">문의하기</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- 푸터 -->
+    <footer id="site-footer">
+        <div class="container">
+            <p>&copy; 2024 SmartWork. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
