@@ -169,6 +169,132 @@ body {
 .alternate-bg {
     background-color: #f7faff;
 }
+
+/* ABOUT 섹션 반응형 구조 */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 320px;
+}
+
+/* about 섹션의 container도 다른 섹션과 동일하게 중앙정렬 */
+#about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.about-image-block {
+    flex: 1 1 320px;
+    min-width: 220px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    margin: 0;
+}
+.about-image {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(49,130,246,0.08);
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    background: #f0f3fa;
+}
+.about-content-block {
+    flex: 2 1 400px;
+    min-width: 260px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.about-desc {
+    font-size: 1.12em;
+    color: #333;
+    margin-bottom: 8px;
+}
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1.08em;
+}
+.about-icon {
+    font-size: 1.3em;
+    margin-right: 8px;
+}
+.about-extra {
+    margin-top: 18px;
+}
+.about-extra h3 {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #225ea8;
+}
+
+@media (max-width: 600px) {
+  .about-table {
+    font-size: 0.98em;
+    min-width: 320px;
+  }
+  .about-table-block {
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 900px) {
+  #about .container {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+  .about-flex {
+    flex-direction: column;
+    gap: 26px;
+    align-items: stretch;
+    min-height: unset;
+    max-width: 100vw;
+  }
+  .about-image-block, .about-content-block {
+    max-width: 100vw;
+    min-width: 0;
+    padding: 0 2vw;
+    margin: 0;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .about-image {
+    max-width: 96vw;
+    aspect-ratio: 16/9;
+  }
+  .about-table {
+    font-size: 0.97em;
+    min-width: 320px;
+  }
+  .about-table-block {
+    padding-bottom: 8px;
+  }
+}
 .process-steps {
     display: flex;
     gap: 32px;
